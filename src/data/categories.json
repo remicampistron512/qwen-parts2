@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "motherboard" },
+  { "id": 2, "name": "cpu" },
+  { "id": 3, "name": "gpu" },
+  { "id": 4, "name": "ram" },
+  { "id": 5, "name": "storage" },
+  { "id": 6, "name": "psu" },
+  { "id": 7, "name": "case" },
+  { "id": 8, "name": "cooler" }
+]
