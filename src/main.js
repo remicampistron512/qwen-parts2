@@ -8,6 +8,8 @@ import * as bootstrap from 'bootstrap'
 import {PartDAO} from "/dao/PartDao";
 import {CategoryDAO} from "./dao/CategoryDao";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import {Router} from "./router/router";
+import {NavigationHandler} from "./ui/navigationHandler";
 // Display the cart in the console
 let cart = new Cart();
 let item = new CartItem(2, 100, 1, 1);
@@ -26,3 +28,16 @@ let daoPart = new PartDAO()
 daoPart.findAll().then(parts => console.log(parts))
 let daoCategory = new CategoryDAO()
 daoCategory.findAll().then(categories => console.log(categories))
+
+// Match routes
+
+// DOM references
+const app = document.querySelector("#main-content");
+const mainContainer = document.querySelector("#main-container");
+
+
+let router = new Router(app,mainContainer);
+const nav = new NavigationHandler(router.navigate.bind(router));
+nav.setupNavigationHandler();
+router.render();
+window.addEventListener("popstate", () => router.handlePopState());
