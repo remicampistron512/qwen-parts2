@@ -7,7 +7,7 @@ import {CartItem} from '/domain/cartitem';
 import * as bootstrap from 'bootstrap'
 import {PartDAO} from "/dao/PartDao";
 import {CategoryDAO} from "./dao/CategoryDao";
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 // Display the cart in the console
 let cart = new Cart();
 let item = new CartItem(2, 100, 1, 1);

@@ -1,15 +1,131 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Vite</title>
-    <script type="module" src="main.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QwenParts - Computer parts</title>
+    <link href="./scss/styles.scss" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+    <script type="module" src="./main.js"></script>
+
 </head>
+
 <body>
-<div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Vite!</h1>
-    <button class="btn btn-primary">Primary button</button>
+<!-- Header -->
+<div id="main-container" class="app-hidden container">
+
+
+    <header class="container top-space">
+        <!-- Top row: Logo / Search / Icons -->
+        <div class="row align-items-center gy-3">
+            <div class="col-12 col-md-4 text-center text-md-start">
+                <h2><a href="/"><span class="fw-bold">Qwen</span><span class="fw-lighter">Parts</span></a></h2>
+            </div>
+
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <form id="search-form" class="search-input d-flex" role="search">
+                    <button class="btn " type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input
+                            id="search-input"
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search products..."
+                            aria-label="Search"
+                    />
+
+                </form>
+
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="d-flex justify-content-center justify-content-md-end align-items-center gap-4">
+                    <a class="text-white" href="#" aria-label="Account">
+                        <i class="bi bi-person-circle fs-4"></i>
+                    </a>
+
+
+                    <a href="/cart" data-link class="nav-link position-relative">
+                        <i class="bi bi-cart"></i>
+                        Cart
+                        <span id="cart-count"
+                              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    0
+  </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Nav links row -->
+        <nav data-bs-theme="dark" class=" navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  data-link href="/category/motherboard">Motherboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  data-link href="/category/case">Case</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  data-link href="/category/psu">Power Supply</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  data-link href="/category/storage">Storage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-link href="/category/gpu" >
+                                Graphics card
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <main id="main-content" class="container">
+
+
+    </main>
+
+    <!-- Footer links -->
+    <footer class="py-5">
+        <div class="row g-4 footer-links small">
+            <div class="col-6">
+                <ul class="list-unstyled mb-0 d-grid gap-2">
+                    <li><a data-link href="/">Home</a></li>
+                    <li><a data-link href="/cart">Cart</a></li>
+                    <li><a data-link href="/category/motherboard">Motherboard</a></li>
+                    <li><a data-link href="/category/case">Case</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                <ul class="list-unstyled mb-0 d-grid gap-2">
+                    <li><a data-link href="/category/psu">Power supply</a></li>
+                    <li><a data-link href="/category/storage">Storage</a></li>
+                    <li><a data-link href="/category/gpu">Graphic card</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </footer>
 </div>
+
 </body>
 </html>
