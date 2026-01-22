@@ -5,6 +5,7 @@ import {CartItem} from '../domain/cartitem';
 
 // Import all of Bootstrap’s JS
 import * as bootstrap from 'bootstrap'
+import {PartDAO} from "../dao/PartDao";
 
 
 let cart = new Cart();
@@ -16,3 +17,7 @@ cart.addItem(item2);
 cart.addItem(item3);
 let total = cart.totalPriceCents();
 console.log(total);
+
+let daoPart = new PartDAO()
+daoPart.findAll().then(parts => console.log(parts))
+
