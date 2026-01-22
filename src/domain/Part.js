@@ -1,4 +1,4 @@
-class Part {
+export class Part {
     id;
     name;
     shortDescription;

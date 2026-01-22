@@ -1,4 +1,4 @@
-class CartItem {
+export class CartItem {
     id;
     quantity;
     unitPriceCents;
