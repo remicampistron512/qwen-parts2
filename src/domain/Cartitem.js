@@ -1,4 +1,4 @@
-class Cartitem {
+class CartItem {
     id;
     quantity;
     unitPriceCents;
